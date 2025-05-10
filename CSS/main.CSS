@@ -1,0 +1,194 @@
+:root {
+    --background-menu: rgba(195, 35, 88);
+    --blanco: #fcf3eb;
+    --negro-claro: #2e3440;
+    --negro-oscuro: #222;
+    --gris-claro: #eee;
+    --gris: #ccc;
+    --azul-claro: rgba(66,186,255);
+    --azul-oscuro: rgb(26,72,151);
+    --verde-claro: #67ca50;
+    --transparency-hard: rgba(0, 0, 0, .7);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    box-sizing: inherit;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+
+/*****************************
+
+MENU
+
+*****************************/
+
+.main {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-menu);
+    color: var(--negro-claro);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px);
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: "about about gallery gallery"
+                        "about about contact us";
+                        gap : 20px;
+
+}
+
+.imenu{
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imenu a{
+    text-decoration: none;
+    color: var(--gris);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+}
+
+.imenu .back, 
+.imenu .front { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.about{
+    grid-area: about;
+}
+
+.gallery{
+    grid-area: gallery;
+}
+
+
+.contact{
+    grid-area: contact;
+}
+
+.us{
+    grid-area: us;
+}
+
+.front {
+    background-color: var(--gris-claro);
+    z-index: 2;
+  
+}
+
+.back {
+    background-color: var(--negro-claro);
+    z-index: 1;
+
+}
+
+.imenu:hover .front {
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+}
+
+.about .front{
+    background-image: url(../img/portada-05.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.gallery .front{
+    background-image: url(../img/portada-01.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.us .front{
+    background-image: url(../img/portada-06.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.contact .front{
+    background-image: url(../img/portada-07.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+/*****************************
+
+ABOUT
+
+*****************************/
+
+#about{
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#about .texto{
+    flex: 40%;
+    padding: 30px;
+    text-align: justify;
+}
+
+#about .imagen{
+    flex: 60%;
+}
+
+#about .imagen img{
+
+    object-fit: cover;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0.8));
+    mask-image: linear-gradient(black 80%, transparent);
+    width: 350px;
+    height: 520px;
+}
+
+
+/*****************************
+
+GALLERY
+
+*****************************/
+
+#gallery {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--negro-oscuro);
+}
+
+
+.galeria{
+    
+}
+
+
