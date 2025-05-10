@@ -13,9 +13,12 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/react.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
 </head>
 <body>
+
     <section class="main">
         <div class="imenu about">
             
@@ -30,7 +33,7 @@
         <div class="imenu contact">
             
             <div class="front"></div>
-            <div class="back"><a href="#" rel="noopener noreferrer">Contact</a></div>
+            <div class="back"><a href="#contact" rel="noopener noreferrer">Contact</a></div>
         </div>
         <div class="imenu us">
             
@@ -39,7 +42,7 @@
         </div>
     </section>
 
-    <section id="about">
+    <main id="about">
         <div class="texto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit rerum vero unde dignissimos ut enim saepe laborum ab quam a ducimus, ipsum vel autem commodi optio alias aspernatur ipsam?
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, eveniet autem dolor iusto voluptatem modi eos temporibus ipsam dicta eum provident rerum quaerat cupiditate placeat eaque ex a rem. Magnam!
@@ -49,7 +52,8 @@
             <img src="img/yo.png" alt="Yo en la playa">
         </div>
 
-    </section>
+    </main>
+
     <section id="gallery">
         <div class="galeria">
             <div>
@@ -66,5 +70,29 @@
             </div>
         </div>
     </section>
+
+    <section id="contact">
+        <div class="wrapper">
+            <h2>Contacto</h2>
+            <form action="">
+                <div class="input-box">
+                    <input type="text" name="name" id="name" placeholder="Nombre..." required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" id="email" placeholder="Email..." required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-area">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+                <div class="check-box">
+                    <label for="terms"><input type="checkbox" name="terms" id="terms" required>Acepto los terminos y condiciones</label>
+                </div>
+                <button class="btn" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
 </body>
 </html>
