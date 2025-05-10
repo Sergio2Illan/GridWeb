@@ -188,7 +188,74 @@ GALLERY
 
 
 .galeria{
-    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.galeria div {
+    position:relative;
+    width: 250px;
+    transition: all .3s ease;
+}
+
+.galeria div::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0,0,0) 95%);
+    opacity:0;
+    transition: all .3s ease;
+}
+
+.galeria div img:first-child {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.galeria div img:last-child{
+    width: 200px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+.galeria div:hover{
+    transform:
+        perspective(250px) 
+        rotatex(15deg)
+        translateY(-5%)
+        translateZ(0)
+    ;
+}
+
+.galeria div:hover::before {
+    opacity: 1;
+}
+
+.galeria div:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10%);
 }
 
 
+.mario-shadow{
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+}
+
+.luigi-shadow{
+    box-shadow: 0 60px 60px -60px rgba(33, 160, 50, 0.5);
+}
+
+.toad-shadow{
+    box-shadow: 0 60px 60px -60px rgba(134, 135, 140, 0.5);
+}
